@@ -1,0 +1,117 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 0.75rem 3rem;
+    background-color: #fff;
+    color: #111;
+    font-family: "Comic Sans MS", sans-serif;
+}
+
+.navbar-links,
+.navbar-actions {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-links {
+    gap: 1.75rem;
+}
+
+.navbar-actions {
+    gap: 1.5rem;
+}
+
+.navbar a {
+    color: inherit;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.navbar a:hover,
+.navbar a:focus-visible {
+    color: #555;
+}
+
+.navbar-logo img {
+    display: block;
+    width: 5rem;
+    height: auto;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    border: 1px solid #aaa;
+    border-radius: 0.4rem;
+    background-color: #f0f0f0;
+}
+
+.search-form input {
+    width: 20rem;
+    padding: 0.85rem 0.8rem;
+    border: 0;
+    outline: 0;
+    background: #f0f0f0;
+    color: #333;
+    font: inherit;
+}
+
+.search-form input:focus-visible {
+    box-shadow: inset 0 0 0 2px #2196f3;
+}
+
+.search-form button {
+    display: grid;
+    place-items: center;
+    align-self: stretch;
+    min-width: 4rem;
+    padding: 0.5rem 0.8rem;
+    border: 0;
+    background: #fff;
+    color: #2196f3;
+    cursor: pointer;
+}
+
+.search-form svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    fill: none;
+    stroke: currentColor;
+    stroke-linecap: round;
+    stroke-width: 2.8;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+@media (max-width: 900px) {
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 1rem;
+    }
+
+    .navbar-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .search-form input {
+        width: min(20rem, 55vw);
+    }
+}
