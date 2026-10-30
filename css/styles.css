@@ -301,6 +301,47 @@ html::-webkit-scrollbar {
   text-decoration: underline;
 }
 
+.movies-section {
+  border-top: 14px solid #294653;
+  padding: 48px clamp(24px, 7.5vw, 110px) 48px;
+  background-color: #f1f1f1;
+  color: #111;
+  font-family: Arial, sans-serif;
+}
+
+.movies-title {
+  margin-bottom: 50px;
+  font-size: 30px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.movies-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 30px;
+}
+
+.movie-item img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.movie-item h3 {
+  margin-top: 18px;
+  font-size: 19px;
+  line-height: 1.4;
+}
+
+.movie-item p {
+  margin-top: 4px;
+  font-size: 18px;
+  line-height: 1.4;
+}
+
 
 
 
@@ -312,6 +353,10 @@ html::-webkit-scrollbar {
   .disney-plus-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .movies-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 480px) {
@@ -321,5 +366,9 @@ html::-webkit-scrollbar {
 
   .disney-plus-grid {
     grid-template-columns: 1fr;
+  }
+
+  .movies-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
