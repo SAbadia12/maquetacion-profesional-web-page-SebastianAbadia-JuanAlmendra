@@ -11,6 +11,12 @@ body {
   width: 100%;
 }
 
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
 html {
   scrollbar-width: none;
   -ms-overflow-style: none;
@@ -343,7 +349,7 @@ html::-webkit-scrollbar {
 }
 
 .parks-section {
-  padding: 8px clamp(24px, 6.2vw, 110px) 32px;
+  padding: 38px clamp(24px, 6.2vw, 110px) 62px;
   background-color: #f1f1f1;
   color: #333;
   font-family: Arial, sans-serif;
@@ -397,26 +403,113 @@ html::-webkit-scrollbar {
 }
 
 .parks-item a {
-  padding: 0 50px 50px;
+  display: inline-block;
+  padding: 0 20px 20px;
   color: inherit;
   font-size: 18px;
   font-weight: 700;
   text-decoration: underline;
 }
 
+.more-section {
+  display: flex;
+  min-height: 900px;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 50px clamp(24px, 5vw, 80px);
+  background-color: #e4faf8;
+  background-image: url("../images/more-background.jpeg");
+  background-position: center;
+  background-size: cover;
+  color: #315d91;
+  font-family: Arial, sans-serif;
+}
 
+.more-content {
+  width: min(48%, 750px);
+  text-align: center;
+}
 
+.more-content h2 {
+  margin-bottom: 26px;
+  font-size: clamp(24px, 2.7vw, 56px);
+  line-height: 1.1;
+  text-align: left;
+}
 
+.more-offer {
+  margin-bottom: 24px;
+  font-size: 16px;
+  line-height: 1.45;
+}
 
+.more-offer h3 {
+  margin-bottom: 4px;
+  font-size: 24px;
+}
 
+.more-offer p + p {
+  margin-top: 3px;
+}
 
+.more-link {
+  display: inline-block;
+  min-width: 205px;
+  padding: 14px 28px;
+  border-radius: 30px;
+  background-color: #9955ad;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+}
 
+.site-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 30px 24px;
+  background-color: #fff;
+  color: #111;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
 
+.footer-logo {
+  display: block;
+  width: 70px;
+  height: auto;
+}
 
+.footer-nav,
+.footer-legal {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 22px;
+  row-gap: 12px;
+}
 
+.footer-nav a,
+.footer-legal a {
+  color: inherit;
+  font-size: 11px;
+  text-decoration: none;
+}
 
+.footer-legal a {
+  font-weight: 700;
+}
 
+.footer-nav a:hover,
+.footer-legal a:hover {
+  text-decoration: underline;
+}
 
+.footer-copyright {
+  font-size: 11px;
+}
 
 @media (max-width: 760px) {
   .shop-section {
@@ -433,6 +526,21 @@ html::-webkit-scrollbar {
 
   .parks-grid {
     grid-template-columns: 1fr;
+  }
+
+  .more-section {
+    min-height: 0;
+    padding: calc(50vw + 32px) 24px 48px;
+    background-position: top center;
+    background-size: 100% auto;
+  }
+
+  .more-content {
+    width: 100%;
+  }
+
+  .more-content h2 {
+    text-align: center;
   }
 }
 
